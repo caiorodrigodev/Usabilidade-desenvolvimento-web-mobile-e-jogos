@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Viagens</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #232f3f;
+            color: white;
+            padding: 30px 100px;
+        }
+        
+        li {
+            float: right;
+            display: block;
+            text-align: center;
+            padding: 0px 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 50px 0px;
+        }
+        
+        .bg-blue {
+            background: #2eb188;
+        }
+        
+        .imagem-responsiva {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25rem;
+        }
+        
+        p.texto {
+            text-align: center;
+            color: white;
+            padding: 0px 15%;
+        }
+        
+        form {
+            padding: 0px 30%;
+        }
+        
+        .formulario {
+            border: none;
+            border-bottom: 1px solid rgb(90, 90, 90);
+            padding: 5px 0px;
+            outline: none;
+        }
+        
+        input {
+            width: 100%;
+        }
+        
+        [placeholder]:focus::-webkit-input-placeholder {
+            transition: text-indent 0.4s 0.4s ease;
+            text-indent: -100%;
+            opacity: 1;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #2db287;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+            padding: 16px;
+            width: 120px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li style="float:left"><strong>PORTAL DE VIAGENS</strong></li>
+            <li><a href="#">CONTATO</a></li>
+            <li><a href="#">VALORES</a></li>
+            <li><a href="#">DESTINOS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container bg-blue">
+
+        <img src="img/nave.png" class="imagem-responsiva">
+
+        <p class="texto" style="font-size: 4.5rem;">
+            AS MELHORES NAVES!
+        </p>
+        <p class="texto" style="font-size: 1.125rem;">
+            Preços especiais para os planetas da federação galáctica. Visite ainda universos, dimensões e realidades alternativas.
+        </p>
+    </div>
+
+    <div class="container">
+        <p class="texto" style="font-size: 2.75rem; color: black;">
+            CONSULTAR VALORES
+        </p>
+        <form action="">
+            <p style="margin-bottom: 35px;">
+                <input class="formulario" placeholder="Origem">
+            </p>
+            <p style="margin-bottom: 35px;">
+                <input class="formulario" placeholder="Destino">
+            </p>
+            <p style="margin-bottom: 35px;">
+                <input class="formulario" placeholder="Data de Partida">
+            </p>
+            <p style="margin-bottom: 35px;">
+                <input class="formulario" placeholder="Data de Volta">
+            </p>
+            <p>
+                <button class="button" style="vertical-align:middle"><span>Consultar </span></button>
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>
