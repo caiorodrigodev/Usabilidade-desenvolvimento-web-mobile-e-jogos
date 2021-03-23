@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            display: block;
+            justify-content: center;
+        }
+
+        img.foto {
+            object-position: top;
+            border-radius: 50%;
+            object-fit: cover;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            var origTitle, animatedTitle, timer;
+
+            function animateTitle(newTitle) {
+                var currentState = false;
+                origTitle = document.title; // save original title
+                animatedTitle = "Hey There! " + origTitle;
+                timer = setInterval(startAnimation, 2000);
+
+                function startAnimation() {
+                    // animate between the original and the new title
+                    document.title = currentState ? origTitle : animatedTitle;
+                    currentState = !currentState;
+                }
+            }
+
+            function restoreTitle() {
+                clearInterval(timer);
+                document.title = origTitle; // restore original title
+            }
+
+            // Change page title on blur
+            $(window).blur(function () {
+                animateTitle();
+            });
+
+            // Change page title back on focus
+            $(window).focus(function () {
+                restoreTitle();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <p>
+            <h1>Caio Rodrigo</h1>
+        </p>
+    </div>
+    <div class="container">
+        <img src="eu.jpg" class="foto">
+    </div>
+    <div class="container">
+        <p>
+            <h2>Sobre mim</h2>
+        </p>
+        <p>Profissional com inglês intermediário, curso técnico em Informática e atualmente cursando Ciência da
+            Computação pela Universidade São Judas Tadeu com prévia experiência de estágio na área de Tecnologia da
+            Informação direcionado para Desenvolvimento Web. </p>
+    </div>
+
+</body>
+
+</html>
